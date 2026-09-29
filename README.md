@@ -1,4 +1,4 @@
-# Sign2Sub — Real-Time Sign Language Subtitles
+# ✌️ Sign2Sub | Real-Time Sign Language Subtitles
 
 > **Making conversations accessible for everyone.**  
 > Sign2Sub translates continuous sign language gestures into real-time on-screen subtitles using computer vision — no special hardware required.
