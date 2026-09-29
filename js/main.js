@@ -22,13 +22,60 @@ document.querySelectorAll('.ml').forEach(l => l.addEventListener('click', () => 
 
 // Demo modal
 const modal = document.getElementById('demo-modal');
+const form = document.getElementById('demo-form');
+const formSuccess = document.getElementById('form-success');
+
 const openModal = () => { modal.classList.add('open'); document.body.style.overflow = 'hidden'; };
-const closeModal = () => { modal.classList.remove('open'); document.body.style.overflow = ''; };
+const closeModal = () => { 
+  modal.classList.remove('open'); 
+  document.body.style.overflow = ''; 
+  setTimeout(() => {
+    if (form) {
+      form.style.display = 'flex';
+      form.reset();
+    }
+    if (formSuccess) formSuccess.style.display = 'none';
+  }, 300);
+};
+
 document.getElementById('open-demo').addEventListener('click', openModal);
 document.getElementById('open-demo-cta').addEventListener('click', openModal);
 document.getElementById('close-demo').addEventListener('click', closeModal);
 modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+// Formspree AJAX Submission
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = form.action;
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
+
+    try {
+      const response = await fetch(action, {
+        method: 'POST',
+        body: data,
+        headers: { 'Accept': 'application/json' }
+      });
+      if (response.ok) {
+        form.style.display = 'none';
+        formSuccess.style.display = 'block';
+      } else {
+        alert('Oops! There was a problem submitting your request.');
+      }
+    } catch (error) {
+      alert('Oops! There was a network error.');
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+  });
+}
 
 // Scroll reveal via IntersectionObserver
 const io = new IntersectionObserver(entries => {
