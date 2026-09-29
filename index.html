@@ -3,12 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sign2Sub — Real-Time Sign Language Subtitles</title>
+  <title>Sign2Sub | Real-time Sign Language Subtitles</title>
   <meta name="description" content="Sign2Sub translates continuous sign language gestures into real-time subtitles using computer vision, making conversations accessible for the deaf and hard-of-hearing community." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/style.css" />
+  <link rel="icon" type="image/png" href="images/favicon.png" />
 </head>
 <body>
 
@@ -49,18 +50,14 @@
   <div class="container">
     <div class="hero-content">
       <div class="hero-text">
-        <div class="hero-badge">
-          <span class="dot"></span>
-          Computer Vision · BiLSTM · Real-Time AI
-        </div>
         <h1 class="hero-headline">Sign2<span style="color:var(--green);">Sub</span></h1>
         <p class="hero-sub">Making conversations accessible for everyone.</p>
         <div class="hero-actions">
-          <button class="btn-demo" id="open-demo" aria-label="Watch Sign2Sub demo">
+          <button class="btn-demo" id="open-demo" aria-label="Request Sign2Sub demo">
             <span class="play-icon">
-              <svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21" /></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
             </span>
-            Watch Demo
+            Get a Quick Demo
           </button>
           <a href="#problem" class="btn btn-ghost">Learn More</a>
         </div>
@@ -79,6 +76,11 @@
             <div class="stat-num-hero">0</div>
             <div class="stat-label-hero">Extra hardware needed</div>
           </div>
+          <div class="stat-divider"></div>
+          <div>
+            <div class="stat-num-hero">90<span style="color:var(--green);">%</span></div>
+            <div class="stat-label-hero">Peak recognition accuracy</div>
+          </div>
         </div>
       </div>
       <div class="hero-visual">
@@ -86,17 +88,21 @@
           <img src="images/hero.jpg" alt="Sign language hands with AI landmark tracking overlay" width="580" loading="eager" />
         </div>
         <div class="floating-chip chip-bottom">
-          <div class="chip-icon">✍️</div>
+          <div class="chip-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+          </div>
           <div class="chip-text">
             <strong>Real-Time Subtitles</strong>
             <span>No delay, no hardware</span>
           </div>
         </div>
         <div class="floating-chip chip-top">
-          <div class="chip-icon">🧠</div>
+          <div class="chip-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><ellipse cx="12" cy="5" rx="9" ry="3"/><path d="M21 12c0 1.66-4 3-9 3s-9-1.34-9-3"/><path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5"/></svg>
+          </div>
           <div class="chip-text">
-            <strong>BiLSTM + Attention</strong>
-            <span>0.4 confidence threshold</span>
+            <strong>AI-Powered Model</strong>
+            <span>High confidence recognition</span>
           </div>
         </div>
       </div>
@@ -113,7 +119,10 @@
   <div class="container">
     <div class="problem-grid">
       <div class="reveal-left">
-        <span class="section-label">⚡ The Problem</span>
+        <span class="section-label">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+          The Problem
+        </span>
         <h2 class="section-title">A World That Leaves <span class="accent">Millions Behind</span></h2>
         <p class="section-subtitle">Deaf and hard-of-hearing individuals face daily communication barriers that existing technology has failed to address at scale.</p>
         <div class="problem-stats">
@@ -137,7 +146,7 @@
         <ul class="problem-bullets">
           <li>
             <div class="bullet-icon"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12" /></svg></div>
-            <span>WHO reports <strong>430M+ people</strong> face disabling hearing loss — a number set to double by 2050</span>
+            <span>WHO reports <strong>430M+ people</strong> face disabling hearing loss, a number set to double by 2050</span>
           </li>
           <li>
             <div class="bullet-icon"><svg viewBox="0 0 24 24"><polyline points="20,6 9,17 4,12" /></svg></div>
@@ -158,7 +167,9 @@
           <img src="images/problem.jpg" alt="Communication barrier vs AI subtitle solution illustration" loading="lazy" />
         </div>
         <div class="who-badge">
-          <div class="wi">🏥</div>
+          <div class="wi">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:20px;height:20px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+          </div>
           <div class="wt">
             <strong>430M+</strong>
             <span>WHO Global Report 2024</span>
@@ -173,87 +184,37 @@
 <section id="solution">
   <div class="container">
     <div class="solution-header reveal">
-      <span class="section-label">✨ Our Solution</span>
-      <h2 class="section-title">Sign Language → Subtitles,<br /><span class="accent">Instantly.</span></h2>
-      <p class="section-subtitle">Sign2Sub translates continuous sign language gestures into real-time text overlays using your browser and webcam — no special hardware, no installation required.</p>
+      <span class="section-label">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="12" cy="12" r="10"/><polyline points="12 8 12 12 14 14"/></svg>
+        Our Solution
+      </span>
+      <h2 class="section-title">Sign Language &rarr; Subtitles,<br /><span class="accent">Instantly.</span></h2>
+      <p class="section-subtitle">Sign2Sub translates continuous sign language gestures into real-time text overlays using your browser and webcam. No special hardware or installation required.</p>
     </div>
     <div class="solution-cards">
       <div class="solution-card reveal reveal-delay-1">
-        <div class="card-icon-wrap">🖱️</div>
+        <div class="card-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><polyline points="10 17 15 12 10 7"/><line x1="15" y1="12" x2="3" y2="12"/></svg>
+        </div>
         <h3>One-Click Start Detection</h3>
         <p>Begin translating immediately with a single click. No complex setup or configuration needed. Sign2Sub starts tracking your gestures within seconds of activating the session.</p>
         <span class="solution-tag">Instant Activation</span>
       </div>
       <div class="solution-card reveal reveal-delay-2">
-        <div class="card-icon-wrap">💬</div>
+        <div class="card-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
         <h3>Real-Time Subtitle Overlay</h3>
-        <p>Watch subtitles appear live on screen as gestures are detected. Our BiLSTM model with multi-head attention delivers smooth, accurate, low-latency transcription in real time.</p>
+        <p>Watch subtitles appear live on screen as gestures are detected. Our AI model with multi-head attention delivers smooth, accurate, low-latency transcription in real time.</p>
         <span class="solution-tag">Zero Latency</span>
       </div>
       <div class="solution-card reveal reveal-delay-3">
-        <div class="card-icon-wrap">🌐</div>
+        <div class="card-icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        </div>
         <h3>Works on Browser + Webcam</h3>
         <p>Runs entirely in your web browser using your standard webcam. No specialized gloves, sensors, or external hardware. Accessible for anyone with a modern browser and internet connection.</p>
         <span class="solution-tag">No Hardware Needed</span>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TECH STACK -->
-<section id="tech">
-  <div class="container">
-    <div class="tech-header reveal">
-      <span class="section-label" style="background:rgba(107,178,117,0.15);color:var(--green-light);border-color:rgba(107,178,117,0.3);">⚙️ Technology</span>
-      <h2 class="section-title">Built on Cutting-Edge AI</h2>
-    </div>
-    <p class="tech-intro reveal">
-      Extracts <strong>147-dimensional spatial landmarks</strong> using <strong>MediaPipe Holistic</strong> and a
-      <strong>BiLSTM network with multi-head attention</strong> — engineered for accuracy, speed, and reliability.
-    </p>
-    <div class="tech-grid">
-      <div class="tech-card reveal reveal-delay-1">
-        <span class="tech-emoji">💻</span>
-        <div class="tech-role">Layer 1</div>
-        <h3>Frontend</h3>
-        <p>Captures continuous hand movement in real time directly through the browser. MediaPipe Holistic extracts 147-dimensional spatial landmarks from live webcam streams with zero hardware requirements.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">MediaPipe Holistic</span>
-          <span class="tech-tag">WebRTC</span>
-          <span class="tech-tag">JavaScript</span>
-          <span class="tech-tag">147 Landmarks</span>
-        </div>
-      </div>
-      <div class="tech-card reveal reveal-delay-2">
-        <span class="tech-emoji">⚙️</span>
-        <div class="tech-role">Layer 2</div>
-        <h3>Backend</h3>
-        <p>Processes captured frames with OpenCV for robust gesture recognition and normalization. Handles real-time data pipelines, frame buffering, and landmark preprocessing for AI inference.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">OpenCV</span>
-          <span class="tech-tag">Python</span>
-          <span class="tech-tag">FastAPI</span>
-          <span class="tech-tag">WebSocket</span>
-        </div>
-      </div>
-      <div class="tech-card reveal reveal-delay-3">
-        <span class="tech-emoji">🧠</span>
-        <div class="tech-role">Layer 3</div>
-        <h3>AI / ML</h3>
-        <p>Our BiLSTM network with multi-head attention learns temporal patterns in continuous signing. A <strong style="color:var(--green-light);">0.4 confidence threshold</strong> prevents hallucination and ensures subtitle accuracy even in ambiguous gesture sequences.</p>
-        <div class="tech-tags">
-          <span class="tech-tag">BiLSTM</span>
-          <span class="tech-tag">Multi-Head Attention</span>
-          <span class="tech-tag">TensorFlow</span>
-          <span class="tech-tag">0.4 Threshold</span>
-        </div>
-      </div>
-    </div>
-    <div class="tech-highlight reveal">
-      <div class="tech-highlight-icon">🔬</div>
-      <div class="tech-highlight-text">
-        <strong>Why BiLSTM + Multi-Head Attention?</strong>
-        <span>Sign language is inherently temporal — meaning depends on the sequence and timing of gestures, not just individual frames. Bidirectional LSTM captures forward and backward context while multi-head attention focuses on the most discriminative landmark movements, giving Sign2Sub state-of-the-art accuracy for continuous, real-world signing scenarios.</span>
       </div>
     </div>
   </div>
@@ -263,9 +224,12 @@
 <section id="sdg">
   <div class="container">
     <div class="sdg-section-header">
-      <span class="section-label reveal">🌍 Global Impact</span>
+      <span class="section-label reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        Global Impact
+      </span>
       <h2 class="section-title reveal">Aligned with the <span class="accent">UN Sustainable Development Goals</span></h2>
-      <p class="section-subtitle reveal">Sign2Sub directly addresses two of the most critical UN SDGs — driving inclusive communication through AI-powered technology built for real-world impact.</p>
+      <p class="section-subtitle reveal">Sign2Sub directly addresses two of the most critical UN SDGs, driving inclusive communication through AI-powered technology built for real-world impact.</p>
     </div>
     <div class="sdg-panels">
 
@@ -280,9 +244,9 @@
           <div class="sdg-panel-title">Quality Education</div>
           <p class="sdg-panel-desc">Sign2Sub removes communication barriers in educational settings across Southeast Asia, enabling deaf and hard-of-hearing students to access learning resources, participate in classes, and achieve equal educational outcomes.</p>
           <ul class="sdg-panel-bullets">
-            <li><span class="bul">✓</span>Real-time subtitles in classrooms for deaf students</li>
-            <li><span class="bul">✓</span>Removes dependency on scarce human interpreters</li>
-            <li><span class="bul">✓</span>Supports inclusive education in Cambodia &amp; beyond</li>
+            <li><span class="bul">&#10003;</span>Real-time subtitles in classrooms for deaf students</li>
+            <li><span class="bul">&#10003;</span>Removes dependency on scarce human interpreters</li>
+            <li><span class="bul">&#10003;</span>Supports inclusive education in Cambodia &amp; beyond</li>
           </ul>
         </div>
       </div>
@@ -296,11 +260,11 @@
           </div>
           <div class="sdg-panel-goal">UN Sustainable Development Goal 10</div>
           <div class="sdg-panel-title">Reduced Inequalities</div>
-          <p class="sdg-panel-desc">With 430M+ people globally facing disabling hearing loss, Sign2Sub bridges the digital divide by delivering a free, browser-based tool that works without specialized hardware — ensuring equal participation regardless of ability.</p>
+          <p class="sdg-panel-desc">With 430M+ people globally facing disabling hearing loss, Sign2Sub bridges the digital divide by delivering a free, browser-based tool that works without specialized hardware, ensuring equal participation regardless of ability.</p>
           <ul class="sdg-panel-bullets">
-            <li><span class="bul">✓</span>Zero-cost accessibility — browser + webcam only</li>
-            <li><span class="bul">✓</span>Targets underserved communities in Southeast Asia</li>
-            <li><span class="bul">✓</span>Reduces exclusion in workplaces &amp; public life</li>
+            <li><span class="bul">&#10003;</span>Zero-cost accessibility: browser + webcam only</li>
+            <li><span class="bul">&#10003;</span>Targets underserved communities in Southeast Asia</li>
+            <li><span class="bul">&#10003;</span>Reduces exclusion in workplaces &amp; public life</li>
           </ul>
         </div>
       </div>
@@ -313,7 +277,10 @@
 <section id="award">
   <div class="container">
     <div class="award-section-header">
-      <span class="section-label reveal">🏆 Recognition</span>
+      <span class="section-label reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:6px;"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        Recognition
+      </span>
       <h2 class="section-title reveal">Award-Winning <span class="accent">Innovation</span></h2>
       <p class="section-subtitle reveal">Sign2Sub has earned recognition from leading AI organizations and international competitions for its impact on inclusive communication technology.</p>
     </div>
@@ -321,19 +288,24 @@
 
       <!-- Regional Innovation Award & SEA-LION Feature -->
       <div class="award-big-card reveal reveal-delay-1">
-        <div class="award-big-icon" style="background:linear-gradient(135deg,var(--navy),var(--navy-light));box-shadow:0 8px 24px rgba(38,67,148,0.3);">🥇</div>
-        <div class="award-org">AI Singapore · SEA-LION</div>
+        <div class="award-big-icon" style="background:linear-gradient(135deg,var(--navy),var(--navy-light));box-shadow:0 8px 24px rgba(38,67,148,0.3);">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:36px;height:36px;"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89L17 22l-5-3-5 3 1.523-9.11"/></svg>
+        </div>
+        <div class="award-org">AI Singapore &middot; SEA-LION</div>
         <h3>Regional Innovation Award &amp; Case Study</h3>
-        <p>Winner of a Regional AI &amp; Innovation Award for breakthrough computer vision accessibility technology (40–90% accuracy on 25 ASL words). Following this win, Sign2Sub was selected as an official case study by <strong>AI Singapore (AISG)</strong> on the SEA-LION platform for its potential across Southeast Asia.</p>
+        <p>Winner of a Regional AI &amp; Innovation Award for breakthrough computer vision accessibility technology (40-90% accuracy on 25 ASL words).</p>
+        <a href="https://sea-lion.ai/case-study/sign2sub/" target="_blank" class="award-ext-link">Read the official AISG Case Study &rarr;</a>
       </div>
 
       <!-- AI Youth Festa 2026 -->
       <div class="award-big-card award-upcoming reveal reveal-delay-3">
-        <div class="upcoming-badge"><span class="dot"></span> Upcoming · November 2026</div>
-        <div class="award-big-icon" style="background:linear-gradient(135deg,var(--green),var(--green-dark));box-shadow:0 8px 24px rgba(107,178,117,0.35);margin-top:0;">🚀</div>
+        <div class="upcoming-badge"><span class="dot"></span> Upcoming &middot; November 2026</div>
+        <div class="award-big-icon" style="background:linear-gradient(135deg,var(--green),var(--green-dark));box-shadow:0 8px 24px rgba(107,178,117,0.35);margin-top:0;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:36px;height:36px;"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+        </div>
         <div class="award-org">AI Youth Festa 2026</div>
-        <h3>AI Youth Festa 2026</h3>
-        <p>Sign2Sub is set to compete at the <strong>AI Youth Festa 2026</strong> in November — an international youth AI innovation showcase. We're bringing our real-time sign language translation technology to a global stage.</p>
+        <h3>Global Innovation Finalist</h3>
+        <p>Sign2Sub is set to compete this November at an international youth AI innovation showcase, bringing our real-time sign language translation technology to a global stage.</p>
       </div>
 
     </div>
@@ -344,51 +316,60 @@
 <section id="team">
   <div class="container">
     <div class="team-header">
-      <span class="section-label reveal">👥 The Team</span>
+      <span class="section-label reveal">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;display:inline-block;vertical-align:middle;margin-right:6px;"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        The Team
+      </span>
       <h2 class="section-title reveal">Meet the Builders</h2>
       <p class="section-subtitle reveal" style="margin:0 auto;">A passionate team from Cambodia building technology that bridges the communication gap for millions worldwide.</p>
     </div>
     <div class="team-grid">
       <div class="team-card reveal reveal-delay-1">
-        <div class="team-avatar av-1">RC</div>
+        <div class="team-avatar">
+          <img src="images/team-ritheavatey.jpg" alt="Ritheavatey Chea" />
+        </div>
         <h3>Ritheavatey Chea</h3>
-        <div class="team-role">Backend + Training Dataset</div>
-        <p>Leads server-side architecture and curates the sign language training dataset. Ensures model accuracy and data quality for robust real-world performance.</p>
+        <div class="team-role">Founder &amp; CEO</div>
+        <p>Drives the vision and strategy behind Sign2Sub. Sets the product direction, leads partnerships, and ensures the mission of accessible communication reaches communities that need it most.</p>
         <div class="team-links">
-          <div class="team-link" title="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg></div>
-          <div class="team-link" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg></div>
+          <a href="https://github.com/CheaRitheavatey" target="_blank" class="team-link" title="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg></a>
+          <a href="https://www.linkedin.com/in/ritheavatey-chea-74456a2b5/" target="_blank" class="team-link" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg></a>
         </div>
       </div>
       <div class="team-card reveal reveal-delay-2">
-        <div class="team-avatar av-2">SS</div>
+        <div class="team-avatar">
+          <img src="images/team-somanith.jpg" alt="Somanith Soun" />
+        </div>
         <h3>Somanith Soun</h3>
-        <div class="team-role">Frontend + AI Integration</div>
-        <p>Architects the browser-based UI and integrates the AI/ML pipeline with the live webcam frontend. Ensures a seamless and accessible user experience for all.</p>
+        <div class="team-role">Co-founder &amp; CTO</div>
+        <p>Architects the full technology stack, from browser-based AI pipeline to real-time inference. Leads all engineering decisions and ensures Sign2Sub remains fast, reliable, and scalable.</p>
         <div class="team-links">
-          <div class="team-link" title="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg></div>
-          <div class="team-link" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg></div>
+          <a href="https://github.com/ManithSoun" target="_blank" class="team-link" title="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg></a>
+          <a href="https://www.linkedin.com/in/somanith-soun-1a8b7b296/" target="_blank" class="team-link" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg></a>
         </div>
       </div>
       <div class="team-card reveal reveal-delay-3">
-        <div class="team-avatar av-3">PD</div>
+        <div class="team-avatar">
+          <img src="images/team-piseth.jpg" alt="Piseth Dy" />
+        </div>
         <h3>Piseth Dy</h3>
-        <div class="team-role">Data Operations &amp; Business Strategy</div>
-        <p>Manages data pipelines, annotation workflows, and go-to-market strategy. Bridges technical innovation and real-world impact for the deaf community.</p>
+        <div class="team-role">Co-founder &amp; COO</div>
+        <p>Oversees day-to-day operations, data workflows, and go-to-market execution. Bridges the gap between technical innovation and real-world deployment for the deaf community.</p>
         <div class="team-links">
-          <div class="team-link" title="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg></div>
-          <div class="team-link" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg></div>
+          <a href="https://github.com/pisethdy" target="_blank" class="team-link" title="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg></a>
+          <a href="https://www.linkedin.com/in/piseth-dy/" target="_blank" class="team-link" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg></a>
         </div>
       </div>
-      <div class="team-card reveal reveal-delay-4" style="border-style:dashed;background:linear-gradient(135deg,rgba(38,67,148,0.04),rgba(107,178,117,0.04));">
-        <div class="team-avatar av-4" style="color:var(--gray-600);">+</div>
-        <h3 style="color:var(--gray-400);">Join the Team</h3>
-        <div class="team-role" style="color:var(--gray-400);">Open Positions</div>
-        <p style="color:var(--gray-400);">We're looking for passionate engineers and researchers who want to make communication accessible for everyone.</p>
-        <div class="team-links" style="margin-top:16px;">
-          <a href="mailto:sign2sub@gmail.com" style="display:inline-flex;align-items:center;gap:6px;padding:6px 16px;border-radius:999px;background:rgba(38,67,148,0.08);border:1px solid var(--gray-200);font-size:0.78rem;color:var(--navy);font-weight:600;transition:var(--transition);">
-            <svg viewBox="0 0 24 24" style="width:13px;height:13px;stroke:var(--navy);fill:none;stroke-width:2;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
-            Get in Touch
-          </a>
+      <div class="team-card reveal reveal-delay-4">
+        <div class="team-avatar">
+          <img src="images/team-sophea.jpg" alt="Sophea Vatey Heang" />
+        </div>
+        <h3>Sophea Vatey Heang</h3>
+        <div class="team-role">Co-founder &amp; CFO</div>
+        <p>Manages financial planning, fundraising strategy, and resource allocation. Ensures Sign2Sub's sustainable growth and positions the organization for long-term social impact.</p>
+        <div class="team-links">
+          <a href="https://github.com/sopheavatey" target="_blank" class="team-link" title="GitHub"><svg viewBox="0 0 24 24"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22" /></svg></a>
+          <a href="https://www.linkedin.com/in/sophea-vatey-heang/" target="_blank" class="team-link" title="LinkedIn"><svg viewBox="0 0 24 24"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" /><rect x="2" y="9" width="4" height="12" /><circle cx="4" cy="4" r="2" /></svg></a>
         </div>
       </div>
     </div>
@@ -403,10 +384,9 @@
       <p>Join us in making the world more accessible for the 430M+ deaf and hard-of-hearing individuals.</p>
       <div class="cta-actions">
         <button class="btn-demo" id="open-demo-cta">
-          <span class="play-icon"><svg viewBox="0 0 24 24"><polygon points="5,3 19,12 5,21" /></svg></span>
-          Watch Demo
+          <span class="play-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
+          Get a Quick Demo
         </button>
-        <a href="mailto:sign2sub@gmail.com" class="btn btn-ghost">Get in Touch</a>
       </div>
     </div>
   </div>
@@ -418,7 +398,7 @@
     <div class="footer-top">
       <div class="footer-brand">
         <div class="logo">Sign2<span>Sub</span></div>
-        <p>Translating continuous sign language gestures into real-time subtitles using computer vision — making conversations accessible for everyone.</p>
+        <p>Translating continuous sign language gestures into real-time subtitles using computer vision, making conversations accessible for everyone.</p>
         <div class="footer-contact">
           <a href="mailto:sign2sub@gmail.com" class="contact-item">
             <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><polyline points="22,6 12,13 2,6" /></svg>
@@ -436,29 +416,27 @@
           <li><a href="#home">Home</a></li>
           <li><a href="#problem">About Us</a></li>
           <li><a href="#solution">Solution</a></li>
-          <li><a href="#tech">Technology</a></li>
-          <li><a href="#impact">SDG &amp; Awards</a></li>
+          <li><a href="#sdg">SDG &amp; Impact</a></li>
+          <li><a href="#award">Awards</a></li>
           <li><a href="#team">Team</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h4>Technology</h4>
+        <h4>Our Mission</h4>
         <ul>
-          <li><a href="#tech">MediaPipe Holistic</a></li>
-          <li><a href="#tech">BiLSTM Network</a></li>
-          <li><a href="#tech">Multi-Head Attention</a></li>
-          <li><a href="#tech">OpenCV Backend</a></li>
-          <li><a href="#tech">WebRTC Capture</a></li>
+          <li><a href="#problem">The Problem</a></li>
+          <li><a href="#solution">Our Solution</a></li>
+          <li><a href="#sdg">SDG 4: Quality Education</a></li>
+          <li><a href="#sdg">SDG 10: Reduced Inequalities</a></li>
+          <li><a href="#award">Recognition</a></li>
         </ul>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2026 Sign2Sub. Built with <span>♥</span> in Cambodia. All rights reserved.</p>
+      <p>&copy; 2026 Sign2Sub. All rights reserved.</p>
       <div class="footer-badges">
-        <span class="footer-badge">SDG 4</span>
-        <span class="footer-badge">SDG 10</span>
-        <span class="footer-badge">AISG · SEA-LION 🦁</span>
-        <span class="footer-badge">AI Youth Festa 2026 🚀</span>
+        <span class="footer-badge">AISG &middot; SEA-LION</span>
+        <span class="footer-badge">AI Youth Festa 2026</span>
       </div>
     </div>
   </div>
@@ -467,14 +445,20 @@
 <!-- MODAL -->
 <div class="modal-overlay" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-box">
-    <h3 id="modal-title">Sign2Sub Demo</h3>
-    <p>See our real-time sign language to subtitle system in action.</p>
-    <div class="demo-placeholder">
-      <span class="big-icon">🎬</span>
-      <strong>Demo Video Coming Soon</strong>
-      <span>Our product demo is being prepared. Contact us at sign2sub@gmail.com for a live walkthrough of the system.</span>
-    </div>
-    <button class="modal-close" id="close-demo">✕ &nbsp;Close</button>
+    <h3 id="modal-title">Request a Demo</h3>
+    <p>Get a live walkthrough of our real-time sign language subtitle system.</p>
+    <form class="request-form" onsubmit="event.preventDefault(); alert('Request sent! We will contact you shortly.'); document.getElementById('close-demo').click();">
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <label for="req-name">Name</label>
+        <input type="text" id="req-name" required placeholder="Jane Doe" />
+      </div>
+      <div style="display:flex; flex-direction:column; gap:6px;">
+        <label for="req-email">Work Email</label>
+        <input type="email" id="req-email" required placeholder="jane@company.com" />
+      </div>
+      <button type="submit">Submit Request</button>
+    </form>
+    <button class="modal-close" id="close-demo">&#x2715; &nbsp;Close</button>
   </div>
 </div>
 

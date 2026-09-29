@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 120" fill="white">
+  <!-- Index finger, tilted left -->
+  <rect x="27" y="6" width="20" height="68" rx="10" transform="rotate(-8 37 74)"/>
+  <!-- Middle finger, tilted right -->
+  <rect x="53" y="2" width="20" height="70" rx="10" transform="rotate(8 63 72)"/>
+  <!-- Palm -->
+  <ellipse cx="50" cy="88" rx="29" ry="21"/>
+  <!-- Thumb -->
+  <ellipse cx="20" cy="82" rx="10" ry="15" transform="rotate(-22 20 82)"/>
+  <!-- Ring finger (curled) -->
+  <ellipse cx="75" cy="76" rx="9" ry="14" transform="rotate(18 75 76)"/>
+  <!-- Wrist -->
+  <rect x="36" y="98" width="28" height="20" rx="9"/>
+</svg>
