@@ -45,19 +45,9 @@ modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 // ─────────────────────────────────────────
-// EmailJS Configuration
-// 1. Sign up at https://emailjs.com (free)
-// 2. Create an Email Service (Gmail, Outlook, etc.)
-// 3. Create TWO email templates (see comments below)
-// 4. Paste your keys below
+// Web3Forms Configuration (No footer watermark, 100% Free)
 // ─────────────────────────────────────────
-const EMAILJS_PUBLIC_KEY  = 'ieKVH8xr_dPoGSVw1';        // Account → API Keys
-const EMAILJS_SERVICE_ID  = 'service_1758k6q';        // Email Services tab
-const EMAILJS_TEAM_TPL    = 'template_lwche3n';  // Notifies your team
-const EMAILJS_REPLY_TPL   = 'template_net7djs'; // Auto-reply to submitter
-
-// Init EmailJS
-emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+const WEB3FORMS_ACCESS_KEY = '7abf0d88-020d-4fb0-af5a-f240c0d1c992';
 
 // Spin animation for loading state
 const spinStyle = document.createElement('style');
@@ -69,38 +59,49 @@ if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const submitBtn  = form.querySelector('button[type="submit"]');
+    const submitBtn = form.querySelector('button[type="submit"]');
     const originalHTML = submitBtn.innerHTML;
 
     // Loading state
     submitBtn.innerHTML = '<svg style="width:16px;height:16px;animation:ejs-spin 0.8s linear infinite;vertical-align:middle" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg> Sending\u2026';
     submitBtn.disabled = true;
 
-    // Collect form values — keys must match your EmailJS template variables
-    const params = {
-      from_name:  form.querySelector('#req-name').value.trim(),
-      from_email: form.querySelector('#req-email').value.trim(),
-      message:    form.querySelector('#req-message').value.trim(),
-      reply_to:   form.querySelector('#req-email').value.trim(),
-    };
+    const name = form.querySelector('#req-name').value.trim();
+    const email = form.querySelector('#req-email').value.trim();
+    const message = form.querySelector('#req-message').value.trim();
 
     try {
-      // Send team notification + auto-reply to submitter in parallel
-      await Promise.all([
-        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEAM_TPL,  params),
-        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_REPLY_TPL, params),
-      ]);
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: name,
+          email: email,
+          message: message,
+          subject: `New Demo Request from ${name} - Sign2Sub`,
+          from_name: 'Sign2Sub Demo Request'
+        })
+      });
 
-      form.style.display = 'none';
-      formSuccess.style.display = 'block';
-      form.reset();
+      const result = await response.json();
 
+      if (result.success) {
+        form.style.display = 'none';
+        formSuccess.style.display = 'block';
+        form.reset();
+      } else {
+        throw new Error(result.message || 'Submission failed');
+      }
     } catch (err) {
-      console.error('EmailJS error:', err);
+      console.error('Web3Forms error:', err);
       alert('Something went wrong. Please email us directly at sign2sub@gmail.com');
     } finally {
       submitBtn.innerHTML = originalHTML;
-      submitBtn.disabled  = false;
+      submitBtn.disabled = false;
     }
   });
 }
