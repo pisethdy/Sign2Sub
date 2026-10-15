@@ -444,29 +444,63 @@
 <!-- MODAL -->
 <div class="modal-overlay" id="demo-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
   <div class="modal-box">
-    <h3 id="modal-title">Request a Demo</h3>
-    <p>Get a live walkthrough of our real-time sign language subtitle system.</p>
-    <form class="request-form" id="demo-form" action="https://formspree.io/f/mqpawlva" method="POST">
-      <div style="display:flex; flex-direction:column; gap:6px;">
-        <label for="req-name">Name</label>
-        <input type="text" id="req-name" name="name" required placeholder="Jane Doe" />
+
+    <!-- Header -->
+    <div class="modal-header">
+      <div>
+        <span class="modal-label">Free Walkthrough</span>
+        <h3 id="modal-title">Get a Quick Demo</h3>
+        <p>Fill in your details and we'll be in touch to schedule a live session.</p>
       </div>
-      <div style="display:flex; flex-direction:column; gap:6px;">
-        <label for="req-email">Work Email</label>
-        <input type="email" id="req-email" name="email" required placeholder="jane@company.com" />
-      </div>
-      <button type="submit">Submit Request</button>
-    </form>
-    
-    <div id="form-success" style="display:none; text-align:center; padding: 40px 0;">
-      <svg viewBox="0 0 24 24" fill="none" stroke="var(--green)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:48px;height:48px;margin-bottom:16px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
-      <h4 style="color:#fff; font-size:1.4rem; font-weight:700; margin-bottom:12px;">Request Sent!</h4>
-      <p style="color:rgba(255,255,255,0.6); font-size:0.95rem; line-height:1.6;">Thank you for your interest. Our team will reach out to you shortly to schedule a live demo.</p>
     </div>
-    <button class="modal-close" id="close-demo">&#x2715; &nbsp;Close</button>
+
+    <!-- Form -->
+    <form class="request-form" id="demo-form">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="req-name">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7"/></svg>
+            Name
+          </label>
+          <input type="text" id="req-name" name="name" required placeholder="Jane Doe" autocomplete="name" />
+        </div>
+        <div class="form-group">
+          <label for="req-email">
+            <svg viewBox="0 0 24 24"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+            Email
+          </label>
+          <input type="email" id="req-email" name="email" required placeholder="jane@company.com" autocomplete="email" />
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="req-message">
+          <svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+          Message
+        </label>
+        <textarea id="req-message" name="message" required rows="4" placeholder="Tell us about your use case — school, workplace, conference..." autocomplete="off"></textarea>
+      </div>
+      <button type="submit" class="demo-submit-btn">
+        Submit Request
+        <svg class="btn-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+      </button>
+    </form>
+
+    <!-- Success state -->
+    <div id="form-success" style="display:none; text-align:center; padding: 48px 0;">
+      <div class="success-icon-wrap">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+      </div>
+      <h4 class="success-title">Request Sent!</h4>
+    </div>
+
+    <button class="modal-close" id="close-demo">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="width:14px;height:14px;"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      Close
+    </button>
   </div>
 </div>
 
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 <script src="js/main.js" defer></script>
 
 </body>
