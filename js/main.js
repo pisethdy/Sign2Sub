@@ -45,9 +45,9 @@ modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
 document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
 
 // ─────────────────────────────────────────
-// Web3Forms Configuration (No footer watermark, 100% Free)
+// Google Apps Script Configuration (Auto-reply + Notification, 100% Free, No Watermark)
 // ─────────────────────────────────────────
-const WEB3FORMS_ACCESS_KEY = '7abf0d88-020d-4fb0-af5a-f240c0d1c992';
+const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw57RP_I2WR2r_0mOzQOg4sCui0QMNVcR-K71x1OWUapMHagG__Gnl1crYvuE1boDFx/exec';
 
 // Spin animation for loading state
 const spinStyle = document.createElement('style');
@@ -71,25 +71,21 @@ if (form) {
     const message = form.querySelector('#req-message').value.trim();
 
     try {
-      const response = await fetch('https://api.web3forms.com/submit', {
+      const response = await fetch(GOOGLE_SCRIPT_URL, {
         method: 'POST',
         headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
+          'Content-Type': 'text/plain;charset=utf-8'
         },
         body: JSON.stringify({
-          access_key: WEB3FORMS_ACCESS_KEY,
           name: name,
           email: email,
-          message: message,
-          subject: `New Demo Request from ${name} - Sign2Sub`,
-          from_name: 'Sign2Sub Demo Request'
+          message: message
         })
       });
 
       const result = await response.json();
 
-      if (result.success) {
+      if (result.status === 'success') {
         form.style.display = 'none';
         formSuccess.style.display = 'block';
         form.reset();
@@ -97,7 +93,7 @@ if (form) {
         throw new Error(result.message || 'Submission failed');
       }
     } catch (err) {
-      console.error('Web3Forms error:', err);
+      console.error('Submission error:', err);
       alert('Something went wrong. Please email us directly at sign2sub@gmail.com');
     } finally {
       submitBtn.innerHTML = originalHTML;
